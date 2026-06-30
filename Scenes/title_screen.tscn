@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://drvonn0ym0j7h"]
+
+[ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_klylv"]
+
+[node name="TitleScreen" type="Node2D" unique_id=974795246]
+
+[node name="Background" type="TextureRect" parent="." unique_id=679938813]
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("1_klylv")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1630773864]
+clip_contents = false
+offset_left = 144.0
+offset_top = 72.0
+offset_right = 1048.0
+offset_bottom = 303.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 150
+text = "Star Catcher"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=181346376]
+offset_left = 368.0
+offset_top = 320.0
+offset_right = 782.0
+offset_bottom = 564.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=256708797]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 36
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1916125735]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 36
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=981346694]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 36
+text = "Quit"
