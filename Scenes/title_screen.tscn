@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://drvonn0ym0j7h"]
 
 [ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_klylv"]
+[ext_resource type="Script" uid="uid://ccjg5yon1ihml" path="res://Scenes/title_screen.gd" id="1_p3fck"]
 
 [node name="TitleScreen" type="Node2D" unique_id=974795246]
+script = ExtResource("1_p3fck")
 
 [node name="Background" type="TextureRect" parent="." unique_id=679938813]
 offset_right = 1152.0
@@ -42,3 +44,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 36
 text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
