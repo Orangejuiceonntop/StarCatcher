@@ -1,3 +1,60 @@
 [gd_scene format=3 uid="uid://53amfugnp6vk"]
 
+[ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_rol8n"]
+[ext_resource type="Texture2D" uid="uid://c6k1yyw3du3gx" path="res://icon.svg" id="2_cn3xy"]
+
 [node name="level_scene" type="Node2D" unique_id=338904262]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1483310160]
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("1_rol8n")
+
+[node name="NetContainer" type="HBoxContainer" parent="." unique_id=1411535658]
+offset_left = 120.0
+offset_top = 136.0
+offset_right = 1021.0
+offset_bottom = 313.0
+
+[node name="Net" type="TextureRect" parent="NetContainer" unique_id=619374571]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 2
+
+[node name="Net2" type="TextureRect" parent="NetContainer" unique_id=332888010]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 2
+
+[node name="Net3" type="TextureRect" parent="NetContainer" unique_id=1340080272]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 2
+
+[node name="Net4" type="TextureRect" parent="NetContainer" unique_id=1345827415]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 2
+
+[node name="Net5" type="TextureRect" parent="NetContainer" unique_id=1039023570]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 2
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=258613661]
+offset_left = 482.0
+offset_top = 350.0
+offset_right = 653.0
+offset_bottom = 414.0
+theme_override_font_sizes/normal_font_size = 46
+text = "Level #"
+fit_content = true
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1490575597]
+offset_left = 531.0
+offset_top = 432.0
+offset_right = 610.0
+offset_bottom = 496.0
+theme_override_font_sizes/normal_font_size = 46
+text = "0.0"
+fit_content = true
