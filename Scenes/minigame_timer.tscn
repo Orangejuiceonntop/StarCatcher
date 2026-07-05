@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cxl475qg3nvsf" path="res://minigame_timer.gd" id="1_n0myg"]
 
-[node name="minigame_timer" type="Node2D" unique_id=809910690]
+[node name="ThemedTimer" type="Node2D" unique_id=809910690]
 script = ExtResource("1_n0myg")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2015344560]
-offset_right = 40.0
+offset_left = 2.0
+offset_right = 42.0
 offset_bottom = 40.0
+text = "10.0"

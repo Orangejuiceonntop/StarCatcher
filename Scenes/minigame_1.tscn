@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://sq2jfyw4c1fw"]
 
+[ext_resource type="Script" uid="uid://cxl475qg3nvsf" path="res://minigame_timer.gd" id="1_5txvl"]
 [ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_11mgy"]
 [ext_resource type="PackedScene" uid="uid://ds5q7w8f15kao" path="res://player.tscn" id="2_f6tb2"]
+[ext_resource type="PackedScene" uid="uid://qi85jqq6jxxo" path="res://Scenes/minigame_timer.tscn" id="3_0uv5o"]
 [ext_resource type="Texture2D" uid="uid://bnelhcdpoqudx" path="res://Assets/Pink Star.png" id="3_f6tb2"]
+[ext_resource type="Script" uid="uid://du5lsbeg7yy2p" path="res://Scenes/star.gd" id="3_o6yob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
 size = Vector2(20, 658)
@@ -11,18 +14,18 @@ size = Vector2(20, 658)
 size = Vector2(51.81371, 7.782452)
 
 [sub_resource type="Animation" id="Animation_f6tb2"]
-length = 0.001
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Star:position")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(425.00003, 344)]
+"values": [Vector2(425.00003, 344), Vector2(425.00003, 331)]
 }
 
 [sub_resource type="Animation" id="Animation_o6yob"]
@@ -47,7 +50,11 @@ _data = {
 &"floating": SubResource("Animation_o6yob")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_f6tb2"]
+radius = 11.2140665
+
 [node name="minigame_1" type="Node2D" unique_id=186719838]
+script = ExtResource("1_5txvl")
 
 [node name="Background" type="TextureRect" parent="." unique_id=945688916]
 offset_right = 1151.0
@@ -61,6 +68,10 @@ shape = SubResource("RectangleShape2D_11mgy")
 [node name="Boundaryright" type="CollisionShape2D" parent="Background" unique_id=1744726780]
 position = Vector2(1163, 321)
 shape = SubResource("RectangleShape2D_11mgy")
+
+[node name="minigame_timer" parent="." unique_id=809910690 instance=ExtResource("3_0uv5o")]
+position = Vector2(38, 47)
+scale = Vector2(5.0400014, 2.1600003)
 
 [node name="Platform 1" type="StaticBody2D" parent="." unique_id=2081169617]
 
@@ -123,16 +134,76 @@ shape = SubResource("RectangleShape2D_tfs2c")
 [node name="Player" parent="." unique_id=1045593391 instance=ExtResource("2_f6tb2")]
 position = Vector2(-475, 271)
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1850762714]
+[node name="Star" type="Node2D" parent="." unique_id=1850762714]
+script = ExtResource("3_o6yob")
 
-[node name="Star" type="TextureRect" parent="Node2D" unique_id=20404880]
+[node name="Star" type="TextureRect" parent="Star" unique_id=20404880]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 344.0
+offset_top = 331.37885
 offset_right = 457.00003
-offset_bottom = 376.0
+offset_bottom = 363.37885
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
-[node name="animation" type="AnimationPlayer" parent="Node2D" unique_id=539249638]
+[node name="animation" type="AnimationPlayer" parent="Star" unique_id=539249638]
 libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Star" unique_id=135133770]
+position = Vector2(382, 407.99997)
+scale = Vector2(-4.551845, -3.18245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Star/Area2D" unique_id=1974236836]
+position = Vector2(-28.77954, -9.42671)
+scale = Vector2(1, 1.3393612)
+shape = SubResource("CircleShape2D_f6tb2")
+
+[node name="Star2" type="Node2D" parent="." unique_id=1600520386]
+position = Vector2(568, -138)
+script = ExtResource("3_o6yob")
+
+[node name="Star" type="TextureRect" parent="Star2" unique_id=2107086132]
+texture_filter = 1
+offset_left = 425.00003
+offset_top = 331.15936
+offset_right = 457.00003
+offset_bottom = 363.15936
+scale = Vector2(6.2860603, 6.4759183)
+texture = ExtResource("3_f6tb2")
+
+[node name="animation" type="AnimationPlayer" parent="Star2" unique_id=1249226713]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Star2" unique_id=902239943]
+position = Vector2(382, 407.99997)
+scale = Vector2(-4.551845, -3.18245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Star2/Area2D" unique_id=1785263984]
+position = Vector2(-28.77954, -9.42671)
+scale = Vector2(1, 1.3393612)
+shape = SubResource("CircleShape2D_f6tb2")
+
+[node name="Star3" type="Node2D" parent="." unique_id=1619967481]
+position = Vector2(-378, -272)
+script = ExtResource("3_o6yob")
+
+[node name="Star" type="TextureRect" parent="Star3" unique_id=1308374566]
+texture_filter = 1
+offset_left = 425.00003
+offset_top = 333.0456
+offset_right = 457.00003
+offset_bottom = 365.0456
+scale = Vector2(6.2860603, 6.4759183)
+texture = ExtResource("3_f6tb2")
+
+[node name="animation" type="AnimationPlayer" parent="Star3" unique_id=218823811]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Star3" unique_id=1988252575]
+position = Vector2(382, 407.99997)
+scale = Vector2(-4.551845, -3.18245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Star3/Area2D" unique_id=1923533369]
+position = Vector2(-28.77954, -9.42671)
+scale = Vector2(1, 1.3393612)
+shape = SubResource("CircleShape2D_f6tb2")
