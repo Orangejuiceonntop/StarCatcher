@@ -19,26 +19,31 @@ offset_right = 1068.0
 offset_bottom = 308.0
 
 [node name="Net" type="TextureRect" parent="NetContainer" unique_id=619374571]
+texture_filter = 1
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
 [node name="Net2" type="TextureRect" parent="NetContainer" unique_id=332888010]
+texture_filter = 1
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
 [node name="Net3" type="TextureRect" parent="NetContainer" unique_id=1340080272]
+texture_filter = 1
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
 [node name="Net4" type="TextureRect" parent="NetContainer" unique_id=1345827415]
+texture_filter = 1
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
 [node name="Net5" type="TextureRect" parent="NetContainer" unique_id=1039023570]
+texture_filter = 1
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 3
