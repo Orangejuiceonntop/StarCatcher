@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfs2c"]
 size = Vector2(51.81371, 7.782452)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
+size = Vector2(20, 658)
+
 [node name="minigame_1" type="Node2D" unique_id=186719838]
 
 [node name="Background" type="TextureRect" parent="." unique_id=945688916]
@@ -25,6 +28,14 @@ color = Color(0.7058824, 0.8039216, 0.85882354, 1)
 position = Vector2(575.1066, 614.125)
 scale = Vector2(22.229382, 8.76973)
 shape = SubResource("RectangleShape2D_tfs2c")
+
+[node name="Boundaryleft" type="CollisionShape2D" parent="StaticBody2D" unique_id=556731314]
+position = Vector2(-11, 322)
+shape = SubResource("RectangleShape2D_11mgy")
+
+[node name="Boundaryright" type="CollisionShape2D" parent="StaticBody2D" unique_id=1744726780]
+position = Vector2(1163, 321)
+shape = SubResource("RectangleShape2D_11mgy")
 
 [node name="Player" parent="." unique_id=1045593391 instance=ExtResource("2_f6tb2")]
 position = Vector2(-475, 271)
