@@ -9,7 +9,7 @@ func _ready() -> void:
 	await themed_timer.Timer(7.0)
 	timer_end = true
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if buttons_pressed == 5:
 		if Global.minigames_done > 3:
 			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")

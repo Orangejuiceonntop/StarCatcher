@@ -163,9 +163,9 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star3" unique_id=1308374566]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 332.95264
+offset_top = 332.34784
 offset_right = 457.00003
-offset_bottom = 364.95264
+offset_bottom = 364.34784
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
