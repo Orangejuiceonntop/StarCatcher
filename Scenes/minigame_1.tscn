@@ -1,14 +1,20 @@
 [gd_scene format=3 uid="uid://sq2jfyw4c1fw"]
 
 [ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_11mgy"]
+[ext_resource type="Script" uid="uid://bv12ju8ea37cy" path="res://Scenes/minigame_1.gd" id="1_j1cg4"]
 [ext_resource type="PackedScene" uid="uid://ds5q7w8f15kao" path="res://player.tscn" id="2_f6tb2"]
 [ext_resource type="Texture2D" uid="uid://bnelhcdpoqudx" path="res://Assets/Pink Star.png" id="3_f6tb2"]
 [ext_resource type="Script" uid="uid://du5lsbeg7yy2p" path="res://Scenes/star.gd" id="3_o6yob"]
+[ext_resource type="PackedScene" uid="uid://dni6d3q76sth4" path="res://themed_timer.tscn" id="6_vc5od"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfs2c"]
 size = Vector2(51.81371, 7.782452)
 
 [sub_resource type="Animation" id="Animation_f6tb2"]
+loop_mode = 2
+
+[sub_resource type="Animation" id="Animation_o6yob"]
+resource_name = "floating"
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -23,22 +29,6 @@ tracks/0/keys = {
 "values": [Vector2(425.00003, 344), Vector2(425.00003, 331)]
 }
 
-[sub_resource type="Animation" id="Animation_o6yob"]
-resource_name = "floating"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Star:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(425.00003, 344)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5txvl"]
 _data = {
 &"RESET": SubResource("Animation_f6tb2"),
@@ -49,6 +39,7 @@ _data = {
 radius = 11.2140665
 
 [node name="minigame_1" type="Node2D" unique_id=186719838]
+script = ExtResource("1_j1cg4")
 
 [node name="Background" type="TextureRect" parent="." unique_id=945688916]
 offset_right = 1151.0
@@ -122,9 +113,9 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star" unique_id=20404880]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 344.0
+offset_top = 333.49796
 offset_right = 457.00003
-offset_bottom = 376.0
+offset_bottom = 365.49796
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
@@ -147,9 +138,9 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star2" unique_id=2107086132]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 344.0
+offset_top = 338.5785
 offset_right = 457.00003
-offset_bottom = 376.0
+offset_bottom = 370.5785
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
@@ -172,9 +163,9 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star3" unique_id=1308374566]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 344.0
+offset_top = 332.95264
 offset_right = 457.00003
-offset_bottom = 376.0
+offset_bottom = 364.95264
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
@@ -189,3 +180,9 @@ scale = Vector2(-4.551845, -3.18245)
 position = Vector2(-28.77954, -9.42671)
 scale = Vector2(1, 1.3393612)
 shape = SubResource("CircleShape2D_f6tb2")
+
+[node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("6_vc5od")]
+
+[connection signal="star_collected" from="Star" to="." method="_on_star_star_collected"]
+[connection signal="star_collected" from="Star2" to="." method="_on_star_2_star_collected"]
+[connection signal="star_collected" from="Star3" to="." method="_on_star_3_star_collected"]
