@@ -1,14 +1,9 @@
 [gd_scene format=3 uid="uid://sq2jfyw4c1fw"]
 
-[ext_resource type="Script" uid="uid://cxl475qg3nvsf" path="res://minigame_timer.gd" id="1_5txvl"]
 [ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_11mgy"]
 [ext_resource type="PackedScene" uid="uid://ds5q7w8f15kao" path="res://player.tscn" id="2_f6tb2"]
-[ext_resource type="PackedScene" uid="uid://qi85jqq6jxxo" path="res://Scenes/minigame_timer.tscn" id="3_0uv5o"]
 [ext_resource type="Texture2D" uid="uid://bnelhcdpoqudx" path="res://Assets/Pink Star.png" id="3_f6tb2"]
 [ext_resource type="Script" uid="uid://du5lsbeg7yy2p" path="res://Scenes/star.gd" id="3_o6yob"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
-size = Vector2(20, 658)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfs2c"]
 size = Vector2(51.81371, 7.782452)
@@ -54,24 +49,11 @@ _data = {
 radius = 11.2140665
 
 [node name="minigame_1" type="Node2D" unique_id=186719838]
-script = ExtResource("1_5txvl")
 
 [node name="Background" type="TextureRect" parent="." unique_id=945688916]
 offset_right = 1151.0
 offset_bottom = 646.0
 texture = ExtResource("1_11mgy")
-
-[node name="Boundaryleft" type="CollisionShape2D" parent="Background" unique_id=556731314]
-position = Vector2(-11, 322)
-shape = SubResource("RectangleShape2D_11mgy")
-
-[node name="Boundaryright" type="CollisionShape2D" parent="Background" unique_id=1744726780]
-position = Vector2(1163, 321)
-shape = SubResource("RectangleShape2D_11mgy")
-
-[node name="minigame_timer" parent="." unique_id=809910690 instance=ExtResource("3_0uv5o")]
-position = Vector2(38, 47)
-scale = Vector2(5.0400014, 2.1600003)
 
 [node name="Platform 1" type="StaticBody2D" parent="." unique_id=2081169617]
 
@@ -140,9 +122,9 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star" unique_id=20404880]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 331.37885
+offset_top = 344.0
 offset_right = 457.00003
-offset_bottom = 363.37885
+offset_bottom = 376.0
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
@@ -165,9 +147,9 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star2" unique_id=2107086132]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 331.15936
+offset_top = 344.0
 offset_right = 457.00003
-offset_bottom = 363.15936
+offset_bottom = 376.0
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
@@ -190,9 +172,9 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star3" unique_id=1308374566]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 333.0456
+offset_top = 344.0
 offset_right = 457.00003
-offset_bottom = 365.0456
+offset_bottom = 376.0
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
