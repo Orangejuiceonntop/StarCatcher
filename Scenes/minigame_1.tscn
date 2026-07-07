@@ -113,14 +113,15 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star" unique_id=20404880]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 333.49796
+offset_top = 344.0
 offset_right = 457.00003
-offset_bottom = 365.49796
+offset_bottom = 376.0
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
 [node name="animation" type="AnimationPlayer" parent="Star" unique_id=539249638]
 libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
 
 [node name="Area2D" type="Area2D" parent="Star" unique_id=135133770]
 position = Vector2(382, 407.99997)
@@ -138,14 +139,15 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star2" unique_id=2107086132]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 338.5785
+offset_top = 344.0
 offset_right = 457.00003
-offset_bottom = 370.5785
+offset_bottom = 376.0
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
 [node name="animation" type="AnimationPlayer" parent="Star2" unique_id=1249226713]
 libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
 
 [node name="Area2D" type="Area2D" parent="Star2" unique_id=902239943]
 position = Vector2(382, 407.99997)
@@ -163,14 +165,15 @@ script = ExtResource("3_o6yob")
 [node name="Star" type="TextureRect" parent="Star3" unique_id=1308374566]
 texture_filter = 1
 offset_left = 425.00003
-offset_top = 332.34784
+offset_top = 344.0
 offset_right = 457.00003
-offset_bottom = 364.34784
+offset_bottom = 376.0
 scale = Vector2(6.2860603, 6.4759183)
 texture = ExtResource("3_f6tb2")
 
 [node name="animation" type="AnimationPlayer" parent="Star3" unique_id=218823811]
 libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
 
 [node name="Area2D" type="Area2D" parent="Star3" unique_id=1988252575]
 position = Vector2(382, 407.99997)
