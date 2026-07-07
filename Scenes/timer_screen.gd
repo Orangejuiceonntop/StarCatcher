@@ -12,7 +12,7 @@ extends Node2D
 var time
 
 func _ready() -> void:
-	await Timer(5.0)
+	await Timer(3.0)
 	
 	if Global.minigames_done < 3:
 		Global.minigames_done = Global.minigames_done +1
@@ -46,7 +46,7 @@ func Timer(start_time: float):
 	time = start_time
 	while time > 0.0:
 		await wait(0.1)
-		time -=0.1
+		time -=0.10
 	return
 	
 func wait(seconds: float) -> void:
