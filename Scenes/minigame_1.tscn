@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://du5lsbeg7yy2p" path="res://Scenes/star.gd" id="3_o6yob"]
 [ext_resource type="PackedScene" uid="uid://dni6d3q76sth4" path="res://themed_timer.tscn" id="6_vc5od"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uv5o"]
+size = Vector2(23.51313, 649.6177)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfs2c"]
 size = Vector2(51.81371, 7.782452)
 
@@ -46,20 +49,19 @@ offset_right = 1151.0
 offset_bottom = 646.0
 texture = ExtResource("1_11mgy")
 
-[node name="Border" type="StaticBody2D" parent="Background" unique_id=1588847687]
-position = Vector2(-35, -10.999985)
-scale = Vector2(0.029144643, 1.0182194)
+[node name="Border #1" type="StaticBody2D" parent="Background" unique_id=2051297464]
 
-[node name="ColorRect" type="ColorRect" parent="Background/Border" unique_id=672700698]
-offset_top = 580.0
-offset_right = 1151.0
-offset_bottom = 648.0
-color = Color(0.7058824, 0.8039216, 0.85882354, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Border #1" unique_id=1170974054]
+position = Vector2(-11.125028, 324.75003)
+scale = Vector2(0.9462822, 0.9982794)
+shape = SubResource("RectangleShape2D_0uv5o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Border" unique_id=2077503215]
-position = Vector2(575.1065, 614.125)
-scale = Vector2(22.229382, 8.76973)
-shape = SubResource("RectangleShape2D_tfs2c")
+[node name="Border #2" type="StaticBody2D" parent="Background" unique_id=1500345424]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Border #2" unique_id=485564439]
+position = Vector2(1161.75, 324.00003)
+scale = Vector2(0.9462822, 0.9982794)
+shape = SubResource("RectangleShape2D_0uv5o")
 
 [node name="Platform 1" type="StaticBody2D" parent="." unique_id=2081169617]
 
