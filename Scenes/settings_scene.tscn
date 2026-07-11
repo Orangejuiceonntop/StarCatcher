@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://d4m1rutqx0la3"]
 
 [ext_resource type="Script" uid="uid://hkb25xdqc6mp" path="res://Scenes/settings_scene.gd" id="1_amiku"]
-[ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="2_2kfxj"]
+[ext_resource type="Texture2D" uid="uid://bhuhntq0sxsgc" path="res://Assets/Starcatcher loading bg.PNG" id="2_2kfxj"]
+[ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="3_2gedn"]
 
 [node name="Settings_scene" type="Node2D" unique_id=916544296]
 script = ExtResource("1_amiku")
 
-[node name="Background" type="TextureRect" parent="." unique_id=1206478417]
-offset_right = 1153.0
-offset_bottom = 649.0
+[node name="Background" type="TextureRect" parent="." unique_id=1032336877]
+offset_right = 2048.0
+offset_bottom = 1536.0
+scale = Vector2(0.5625179, 0.42224455)
 texture = ExtResource("2_2kfxj")
 
 [node name="back" type="Button" parent="." unique_id=1908804559]
@@ -22,10 +24,11 @@ text = "<- back"
 
 [node name="Settings" type="RichTextLabel" parent="." unique_id=1930083512]
 clip_contents = false
-offset_left = 356.0
-offset_top = 38.0
-offset_right = 750.0
-offset_bottom = 181.0
+offset_left = 354.0
+offset_top = 92.0
+offset_right = 801.0
+offset_bottom = 235.0
+theme_override_fonts/normal_font = ExtResource("3_2gedn")
 theme_override_font_sizes/normal_font_size = 100
 text = "Settings"
 
