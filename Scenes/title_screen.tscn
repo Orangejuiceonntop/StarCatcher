@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_klylv"]
 [ext_resource type="Script" uid="uid://ccjg5yon1ihml" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="3_4gxqj"]
 
 [node name="TitleScreen" type="Node2D" unique_id=974795246]
 script = ExtResource("1_p3fck")
@@ -39,18 +40,21 @@ offset_bottom = 564.0
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=256708797]
 layout_mode = 2
 theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_4gxqj")
 theme_override_font_sizes/font_size = 36
 text = "Start Game"
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=1916125735]
 layout_mode = 2
 theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_4gxqj")
 theme_override_font_sizes/font_size = 36
 text = "Settings"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=981346694]
 layout_mode = 2
 theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_4gxqj")
 theme_override_font_sizes/font_size = 36
 text = "Quit"
 
