@@ -11,6 +11,15 @@ offset_right = 1152.0
 offset_bottom = 649.0
 texture = ExtResource("1_klylv")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1421313950]
+anchors_preset = -1
+anchor_right = 0.102000006
+anchor_bottom = 0.224
+offset_left = 144.0
+offset_top = 72.0
+offset_right = 144.0
+offset_bottom = 72.0
+
 [node name="Title" type="RichTextLabel" parent="." unique_id=1630773864]
 clip_contents = false
 offset_left = 144.0

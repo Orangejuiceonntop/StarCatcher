@@ -20,4 +20,13 @@ scale = Vector2(1.6527417, 1.4912782)
 theme_override_font_sizes/font_size = 25
 text = "<- back"
 
+[node name="Settings" type="RichTextLabel" parent="." unique_id=1930083512]
+clip_contents = false
+offset_left = 356.0
+offset_top = 38.0
+offset_right = 750.0
+offset_bottom = 181.0
+theme_override_font_sizes/normal_font_size = 100
+text = "Settings"
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

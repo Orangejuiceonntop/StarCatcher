@@ -1,22 +1,23 @@
 [gd_scene format=3 uid="uid://53amfugnp6vk"]
 
 [ext_resource type="Script" uid="uid://d2h8a037fypus" path="res://Scenes/timer_screen.gd" id="1_c7xwe"]
-[ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_rol8n"]
+[ext_resource type="Texture2D" uid="uid://bhuhntq0sxsgc" path="res://Assets/Starcatcher loading bg.PNG" id="2_c7xwe"]
 [ext_resource type="Texture2D" uid="uid://ct463hbqtm1q1" path="res://Assets/Net.png" id="2_cn3xy"]
 
 [node name="level_scene" type="Node2D" unique_id=338904262]
 script = ExtResource("1_c7xwe")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1483310160]
-offset_right = 1153.0
-offset_bottom = 649.0
-texture = ExtResource("1_rol8n")
+offset_right = 2048.0
+offset_bottom = 1536.0
+scale = Vector2(0.5625179, 0.42224455)
+texture = ExtResource("2_c7xwe")
 
 [node name="NetContainer" type="HBoxContainer" parent="." unique_id=1411535658]
-offset_left = 72.0
-offset_top = 112.0
-offset_right = 1068.0
-offset_bottom = 308.0
+offset_left = 75.0
+offset_top = 115.0
+offset_right = 1071.0
+offset_bottom = 311.0
 
 [node name="Net" type="TextureRect" parent="NetContainer" unique_id=619374571]
 texture_filter = 1

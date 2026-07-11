@@ -46,6 +46,21 @@ offset_right = 1151.0
 offset_bottom = 646.0
 texture = ExtResource("1_11mgy")
 
+[node name="Border" type="StaticBody2D" parent="Background" unique_id=1588847687]
+position = Vector2(-35, -10.999985)
+scale = Vector2(0.029144643, 1.0182194)
+
+[node name="ColorRect" type="ColorRect" parent="Background/Border" unique_id=672700698]
+offset_top = 580.0
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0.7058824, 0.8039216, 0.85882354, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Border" unique_id=2077503215]
+position = Vector2(575.1065, 614.125)
+scale = Vector2(22.229382, 8.76973)
+shape = SubResource("RectangleShape2D_tfs2c")
+
 [node name="Platform 1" type="StaticBody2D" parent="." unique_id=2081169617]
 
 [node name="ColorRect" type="ColorRect" parent="Platform 1" unique_id=1150517510]
