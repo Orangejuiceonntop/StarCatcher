@@ -270,6 +270,7 @@ libraries/ = SubResource("AnimationLibrary_qs5pj")
 autoplay = &"float-down"
 
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("4_h684j")]
+position = Vector2(19, 21)
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_button_2_pressed"]

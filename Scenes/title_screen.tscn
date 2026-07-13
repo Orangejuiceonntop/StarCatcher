@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://ccjg5yon1ihml" path="res://Scenes/title_screen.gd" id="1_p3fck"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="3_4gxqj"]
 
+[sub_resource type="FontVariation" id="FontVariation_4gxqj"]
+
 [node name="TitleScreen" type="Node2D" unique_id=974795246]
 script = ExtResource("1_p3fck")
 
@@ -28,6 +30,7 @@ offset_top = 72.0
 offset_right = 1048.0
 offset_bottom = 303.0
 theme_override_constants/outline_size = 40
+theme_override_fonts/normal_font = SubResource("FontVariation_4gxqj")
 theme_override_font_sizes/normal_font_size = 150
 text = "Star Catcher"
 

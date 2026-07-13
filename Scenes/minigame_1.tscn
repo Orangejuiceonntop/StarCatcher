@@ -202,6 +202,7 @@ scale = Vector2(1, 1.3393612)
 shape = SubResource("CircleShape2D_f6tb2")
 
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("6_vc5od")]
+position = Vector2(19, 19)
 
 [connection signal="star_collected" from="Star" to="." method="_on_star_star_collected"]
 [connection signal="star_collected" from="Star2" to="." method="_on_star_2_star_collected"]
