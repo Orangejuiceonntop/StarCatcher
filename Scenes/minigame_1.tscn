@@ -96,13 +96,13 @@ position = Vector2(701, -75.00001)
 scale = Vector2(0.43282333, 0.75302976)
 
 [node name="ColorRect" type="ColorRect" parent="Platform 3" unique_id=452486526]
-offset_top = 580.0
+offset_top = 569.3762
 offset_right = 1151.0
-offset_bottom = 648.0
+offset_bottom = 637.3762
 color = Color(0.7058824, 0.8039216, 0.85882354, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 3" unique_id=2097303529]
-position = Vector2(575.1066, 614.125)
+position = Vector2(575.1067, 603.50134)
 scale = Vector2(22.229382, 8.76973)
 shape = SubResource("RectangleShape2D_tfs2c")
 
@@ -150,7 +150,7 @@ scale = Vector2(1, 1.3393612)
 shape = SubResource("CircleShape2D_f6tb2")
 
 [node name="Star2" type="Node2D" parent="." unique_id=1600520386]
-position = Vector2(568, -138)
+position = Vector2(568, -151)
 script = ExtResource("3_o6yob")
 
 [node name="Star" type="TextureRect" parent="Star2" unique_id=2107086132]
