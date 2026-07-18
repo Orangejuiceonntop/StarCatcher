@@ -19,7 +19,12 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		if velocity.x > 0:
+			$Sprite2D.flip_h = true
+		elif velocity.x < 0:
+			$Sprite2D.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
 
 	move_and_slide()
