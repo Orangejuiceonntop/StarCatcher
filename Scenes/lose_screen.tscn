@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cocsq70ikewiw"]
+
+[ext_resource type="Script" uid="uid://cqn8bfevrndt8" path="res://Scenes/lose_screen.gd" id="1_488pv"]
+[ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="2_go37l"]
+
+[node name="lose_screen" type="Node2D" unique_id=355717993]
+script = ExtResource("1_488pv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1932813920]
+offset_left = 522.0
+offset_top = 85.0
+offset_right = 1134.0
+offset_bottom = 269.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("2_go37l")
+theme_override_font_sizes/normal_font_size = 130
+text = "You lost..."
+
+[node name="retry" type="Button" parent="." unique_id=823075431]
+offset_left = 704.0
+offset_top = 271.0
+offset_right = 847.0
+offset_bottom = 319.0
+text = "retry"
+
+[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
