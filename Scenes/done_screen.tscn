@@ -1,3 +1,34 @@
 [gd_scene format=3 uid="uid://bb2djqre5q620"]
 
+[ext_resource type="Script" uid="uid://cs7jx41t30l6m" path="res://Scenes/done_screen.gd" id="1_3rr80"]
+[ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="1_en6tx"]
+
 [node name="done_screen" type="Node2D" unique_id=592716187]
+script = ExtResource("1_3rr80")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=408141385]
+offset_left = 523.0
+offset_top = 88.0
+offset_right = 1088.0
+offset_bottom = 275.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_en6tx")
+theme_override_font_sizes/normal_font_size = 150
+text = "You win!"
+
+[node name="retry" type="Button" parent="." unique_id=533495489]
+offset_left = 732.0
+offset_top = 321.0
+offset_right = 875.0
+offset_bottom = 369.0
+text = "Play again?"
+
+[node name="menu" type="Button" parent="." unique_id=590325671]
+offset_left = 732.0
+offset_top = 385.0
+offset_right = 875.0
+offset_bottom = 433.0
+text = "Menu"
+
+[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
