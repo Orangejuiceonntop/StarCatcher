@@ -38,6 +38,7 @@ func _process(_delta: float) -> void:
 			net_4.hide()
 		0:
 			net_container.hide()
+			get_tree().change_scene_to_file("res://Scenes/lose_screen.tscn")
 			
 	timer.text = str(time)
 	level.text = "Level " + str(Global.minigames_done)
