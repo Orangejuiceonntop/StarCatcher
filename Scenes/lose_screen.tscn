@@ -19,8 +19,11 @@ text = "You lost..."
 [node name="retry" type="Button" parent="." unique_id=823075431]
 offset_left = 704.0
 offset_top = 271.0
-offset_right = 847.0
-offset_bottom = 319.0
+offset_right = 870.0
+offset_bottom = 323.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_go37l")
+theme_override_font_sizes/font_size = 26
 text = "retry"
 
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
