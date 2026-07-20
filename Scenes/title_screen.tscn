@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drvonn0ym0j7h"]
 
-[ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_klylv"]
 [ext_resource type="Script" uid="uid://ccjg5yon1ihml" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://u5jg04ytyg61" path="res://Assets/Background 3.PNG" id="2_4gxqj"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="3_4gxqj"]
 
 [sub_resource type="FontVariation" id="FontVariation_4gxqj"]
@@ -10,9 +10,10 @@
 script = ExtResource("1_p3fck")
 
 [node name="Background" type="TextureRect" parent="." unique_id=679938813]
-offset_right = 1152.0
-offset_bottom = 649.0
-texture = ExtResource("1_klylv")
+offset_right = 2048.0
+offset_bottom = 1536.0
+scale = Vector2(0.56232923, 0.42214048)
+texture = ExtResource("2_4gxqj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1421313950]
 anchors_preset = -1
