@@ -2,25 +2,31 @@
 
 [ext_resource type="Script" uid="uid://cqn8bfevrndt8" path="res://Scenes/lose_screen.gd" id="1_488pv"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="2_go37l"]
+[ext_resource type="Texture2D" uid="uid://b2ket6cy4adf3" path="res://Assets/Lose Screen Background.PNG" id="2_nk27f"]
 
 [node name="lose_screen" type="Node2D" unique_id=355717993]
 script = ExtResource("1_488pv")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=480371320]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_nk27f")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1932813920]
-offset_left = 522.0
-offset_top = 85.0
-offset_right = 1134.0
-offset_bottom = 269.0
+offset_left = 498.0
+offset_top = 120.0
+offset_right = 1110.0
+offset_bottom = 304.0
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("2_go37l")
 theme_override_font_sizes/normal_font_size = 130
 text = "You lost..."
 
 [node name="retry" type="Button" parent="." unique_id=823075431]
-offset_left = 704.0
-offset_top = 271.0
-offset_right = 870.0
-offset_bottom = 323.0
+offset_left = 680.0
+offset_top = 319.0
+offset_right = 846.0
+offset_bottom = 371.0
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_go37l")
 theme_override_font_sizes/font_size = 26
