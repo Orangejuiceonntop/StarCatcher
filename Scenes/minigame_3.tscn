@@ -7,6 +7,43 @@
 [ext_resource type="PackedScene" uid="uid://dni6d3q76sth4" path="res://themed_timer.tscn" id="5_lr4ld"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="5_rpf30"]
 
+[sub_resource type="Animation" id="Animation_mu65p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Star:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(19.766396, 20.372055)]
+}
+
+[sub_resource type="Animation" id="Animation_s0j2t"]
+resource_name = "click"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Star:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(19.766396, 20.372055), Vector2(20, 20.613), Vector2(19.97, 20.582)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5plo5"]
+_data = {
+&"RESET": SubResource("Animation_mu65p"),
+&"click": SubResource("Animation_s0j2t")
+}
+
 [sub_resource type="Animation" id="Animation_lr4ld"]
 length = 0.001
 tracks/0/type = "value"
@@ -185,12 +222,16 @@ texture = ExtResource("1_ihkhm")
 
 [node name="Star" type="TextureButton" parent="." unique_id=1491076300]
 texture_filter = 1
-offset_left = 271.0
+offset_left = 261.0
 offset_top = 94.00001
-offset_right = 303.0
+offset_right = 293.0
 offset_bottom = 126.00001
 scale = Vector2(19.766396, 20.372055)
 texture_normal = ExtResource("2_we0jk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Star" unique_id=2092065680]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_5plo5")
 
 [node name="Black hole" type="TextureButton" parent="." unique_id=706034457]
 visible = false
@@ -239,4 +280,5 @@ autoplay = &"eyecatcher2"
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("5_lr4ld")]
 position = Vector2(19, 21)
 
+[connection signal="pressed" from="Star" to="." method="_on_star_pressed"]
 [connection signal="pressed" from="Black hole" to="." method="_on_black_hole_pressed"]
