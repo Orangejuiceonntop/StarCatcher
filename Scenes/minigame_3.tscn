@@ -185,9 +185,9 @@ texture = ExtResource("1_ihkhm")
 
 [node name="Star" type="TextureButton" parent="." unique_id=1491076300]
 texture_filter = 1
-offset_left = 255.00002
+offset_left = 271.0
 offset_top = 94.00001
-offset_right = 287.0
+offset_right = 303.0
 offset_bottom = 126.00001
 scale = Vector2(19.766396, 20.372055)
 texture_normal = ExtResource("2_we0jk")
@@ -195,9 +195,9 @@ texture_normal = ExtResource("2_we0jk")
 [node name="Black hole" type="TextureButton" parent="." unique_id=706034457]
 visible = false
 texture_filter = 1
-offset_left = 353.99997
+offset_left = 369.99997
 offset_top = 239.99998
-offset_right = 385.99997
+offset_right = 401.99997
 offset_bottom = 272.0
 scale = Vector2(14.211128, 13.46736)
 texture_normal = ExtResource("3_6sdpr")
