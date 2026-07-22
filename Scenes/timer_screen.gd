@@ -18,7 +18,7 @@ func _ready() -> void:
 		Global.minigames_done = Global.minigames_done +1
 		get_tree().change_scene_to_file("res://Scenes/minigame_" + str(Global.minigames_done) + ".tscn")
 	else:
-		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
 
 func _process(_delta: float) -> void:
 	match Global.lives:
@@ -41,7 +41,7 @@ func _process(_delta: float) -> void:
 			get_tree().change_scene_to_file("res://Scenes/lose_screen.tscn")
 			
 	timer.text = str(time)
-	level.text = "Level " + str(Global.minigames_done)
+	level.text = "Level " + str(Global.minigames_done + 1)
 
 func Timer(start_time: float):
 	time = start_time
