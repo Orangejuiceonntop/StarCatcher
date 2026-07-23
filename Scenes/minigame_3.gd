@@ -32,4 +32,17 @@ func _on_black_hole_pressed() -> void:
 func _on_star_pressed() -> void:
 	$"Star/AnimationPlayer".play("click")
 	star_clicked += 1
+	if star_clicked == 10:
+		$Star.hide()
+		$"Click!".hide()
+		$"Black hole".show()
+		$"Stop!".show()
+		$"Stop!/AnimationPlayer".play("eyecatcher2")
+		await get_tree().create_timer(2).timeout
+		$Star.show()
+		$"Click!".show()
+		$"Click!/AnimationPlayer".play("eyecatcher")
+		$"Black hole".hide()
+		$"Stop!".hide()
+		
 	

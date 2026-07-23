@@ -234,6 +234,7 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_5plo5")
 
 [node name="Black hole" type="TextureButton" parent="." unique_id=706034457]
+visible = false
 texture_filter = 1
 offset_left = 359.0
 offset_top = 239.99997
