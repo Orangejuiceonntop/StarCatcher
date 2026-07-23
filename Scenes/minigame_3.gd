@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 
 func _process(_delta: float) -> void:
-	if star_clicked == 5:
+	if star_clicked == 15:
 		if Global.minigames_done > 2:
 			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
 		else:
