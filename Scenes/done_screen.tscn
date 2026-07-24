@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cs7jx41t30l6m" path="res://Scenes/done_screen.gd" id="1_3rr80"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="1_en6tx"]
+[ext_resource type="Texture2D" uid="uid://dh6x540gfbx13" path="res://Assets/Win Screen Background.PNG" id="2_1q1k2"]
 
 [node name="done_screen" type="Node2D" unique_id=592716187]
 script = ExtResource("1_3rr80")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2050894731]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_1q1k2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=408141385]
 offset_left = 523.0
