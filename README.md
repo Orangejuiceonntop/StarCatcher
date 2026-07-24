@@ -13,5 +13,5 @@ Try here:
 
 ## Credits
 
-Title screen and minigame background - Vecteezy
-All other assets and drawings are created by me, OrangeJuice/Orangejuiceonntop
+- Title screen and minigame background - Vecteezy
+- All other assets and drawings are created by me, OrangeJuice/Orangejuiceonntop
