@@ -22,14 +22,17 @@ func _process(_delta: float) -> void:
 
 func _on_star_star_collected() -> void:
 	star_collected = star_collected +1
+	$Star/AudioStreamPlayer.play()
 	return
 
 
 func _on_star_2_star_collected() -> void:
 	star_collected = star_collected +1
+	$Star2/AudioStreamPlayer.play()
 	return
 
 
 func _on_star_3_star_collected() -> void:
 	star_collected = star_collected +1
+	$Star3/AudioStreamPlayer.play()
 	return

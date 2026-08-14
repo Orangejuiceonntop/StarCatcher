@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ds5q7w8f15kao" path="res://player.tscn" id="2_f6tb2"]
 [ext_resource type="Texture2D" uid="uid://bnelhcdpoqudx" path="res://Assets/Pink Star.png" id="3_f6tb2"]
 [ext_resource type="Script" uid="uid://du5lsbeg7yy2p" path="res://Scenes/star.gd" id="3_o6yob"]
+[ext_resource type="AudioStream" uid="uid://caavk3ixux2kh" path="res://Audio/benkirb-shine-12-268905.mp3" id="6_jmcek"]
 [ext_resource type="PackedScene" uid="uid://dni6d3q76sth4" path="res://themed_timer.tscn" id="6_vc5od"]
+[ext_resource type="AudioStream" uid="uid://07nq8v5eta3u" path="res://Audio/universfield-magic-spell-02-250240.mp3" id="7_ne1wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uv5o"]
 size = Vector2(23.51313, 649.6177)
@@ -149,6 +151,9 @@ position = Vector2(-28.77954, -9.42671)
 scale = Vector2(1, 1.3393612)
 shape = SubResource("CircleShape2D_f6tb2")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Star" unique_id=1707355575]
+stream = ExtResource("6_jmcek")
+
 [node name="Star2" type="Node2D" parent="." unique_id=1600520386]
 position = Vector2(568, -151)
 script = ExtResource("3_o6yob")
@@ -175,6 +180,9 @@ position = Vector2(-28.77954, -9.42671)
 scale = Vector2(1, 1.3393612)
 shape = SubResource("CircleShape2D_f6tb2")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Star2" unique_id=843708834]
+stream = ExtResource("7_ne1wf")
+
 [node name="Star3" type="Node2D" parent="." unique_id=1619967481]
 position = Vector2(-378, -272)
 script = ExtResource("3_o6yob")
@@ -200,6 +208,9 @@ scale = Vector2(-4.551845, -3.18245)
 position = Vector2(-28.77954, -9.42671)
 scale = Vector2(1, 1.3393612)
 shape = SubResource("CircleShape2D_f6tb2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Star3" unique_id=1912049813]
+stream = ExtResource("6_jmcek")
 
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("6_vc5od")]
 position = Vector2(19, 19)
