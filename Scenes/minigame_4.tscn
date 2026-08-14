@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://phiqyaf85mf5"]
+
+[ext_resource type="Texture2D" uid="uid://cysa4o767on5o" path="res://Assets/Background.jpg" id="1_4ashd"]
+[ext_resource type="Script" uid="uid://bls8p0s1x6m4i" path="res://Scenes/minigame_4.gd" id="1_lrixb"]
+[ext_resource type="PackedScene" uid="uid://ds5q7w8f15kao" path="res://player.tscn" id="2_e1srr"]
+[ext_resource type="PackedScene" uid="uid://dni6d3q76sth4" path="res://themed_timer.tscn" id="3_wcvdo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1srr"]
+size = Vector2(23.51313, 649.6177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcvdo"]
+size = Vector2(23.51313, 649.6177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrixb"]
+size = Vector2(51.81371, 7.782452)
+
+[node name="minigame_4" type="Node2D" unique_id=551332280]
+script = ExtResource("1_lrixb")
+
+[node name="Background" type="TextureRect" parent="." unique_id=681183077]
+offset_right = 1151.0
+offset_bottom = 646.0
+texture = ExtResource("1_4ashd")
+
+[node name="Border #1" type="StaticBody2D" parent="Background" unique_id=1537941934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Border #1" unique_id=2113140692]
+position = Vector2(-11.125028, 324.75003)
+scale = Vector2(0.9462822, 0.9982794)
+shape = SubResource("RectangleShape2D_e1srr")
+
+[node name="Border #2" type="StaticBody2D" parent="Background/Border #1" unique_id=460267857]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Border #1/Border #2" unique_id=387711605]
+position = Vector2(1161.75, 324.00003)
+scale = Vector2(0.9462822, 0.9982794)
+shape = SubResource("RectangleShape2D_wcvdo")
+
+[node name="Platform 1" type="StaticBody2D" parent="." unique_id=1406735425]
+
+[node name="ColorRect" type="ColorRect" parent="Platform 1" unique_id=83638947]
+offset_top = 580.0
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0.7058824, 0.8039216, 0.85882354, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 1" unique_id=1514645736]
+position = Vector2(575.1066, 614.125)
+scale = Vector2(22.229382, 8.76973)
+shape = SubResource("RectangleShape2D_lrixb")
+
+[node name="Player" parent="." unique_id=1045593391 instance=ExtResource("2_e1srr")]
+position = Vector2(-205, 271)
+
+[node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("3_wcvdo")]
+position = Vector2(32, 37)
