@@ -14,6 +14,10 @@ config/name="Star Catcher"
 run/main_scene="uid://drvonn0ym0j7h"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[audio]
+
+buses/default_bus_layout="res://Audio/default_bus_layout.tres"
+
 [autoload]
 
 Global="*uid://c8ljakwyq3p5s"

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cqn8bfevrndt8" path="res://Scenes/lose_screen.gd" id="1_488pv"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="2_go37l"]
 [ext_resource type="Texture2D" uid="uid://b2ket6cy4adf3" path="res://Assets/Lose Screen Background.PNG" id="2_nk27f"]
+[ext_resource type="AudioStream" uid="uid://bs0sifyp78jwm" path="res://Audio/creatorshome-keyboard-click-327728.mp3" id="4_38ql5"]
+[ext_resource type="AudioStream" uid="uid://dqroe7aocm10j" path="res://Audio/u_l5xum8z250-losing-horn-313723.mp3" id="4_nk27f"]
 
 [node name="lose_screen" type="Node2D" unique_id=355717993]
 script = ExtResource("1_488pv")
@@ -31,5 +33,12 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_go37l")
 theme_override_font_sizes/font_size = 26
 text = "retry"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="retry" unique_id=664723080]
+stream = ExtResource("4_38ql5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2039467820]
+stream = ExtResource("4_nk27f")
+autoplay = true
 
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
