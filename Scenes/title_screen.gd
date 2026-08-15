@@ -12,12 +12,18 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	$VBoxContainer/Start/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
 
 func _on_settings_pressed() -> void:
+	$VBoxContainer/Settings/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file("res://Scenes/settings_scene.tscn")
 
 
 func _on_quit_pressed() -> void:
+	$VBoxContainer/Quit/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.1).timeout
 	get_tree().quit()
