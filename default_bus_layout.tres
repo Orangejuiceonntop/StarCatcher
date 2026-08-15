@@ -2,4 +2,5 @@
 
 [resource]
 bus/0/bypass_fx = true
-bus/0/volume_db = -12.455342
+bus/0/volume_db = -12.978527
+bus/0/send = &"black hole"

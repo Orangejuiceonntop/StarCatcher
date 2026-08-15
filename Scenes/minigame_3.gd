@@ -31,6 +31,7 @@ func _on_black_hole_pressed() -> void:
 
 func _on_star_pressed() -> void:
 	$"Star/AnimationPlayer".play("click")
+	$Star/AudioStreamPlayer.play()
 	star_clicked += 1
 	if star_clicked == 10:
 		$Star.hide()
