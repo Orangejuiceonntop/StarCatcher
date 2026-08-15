@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b6ncrq0b3l5jl" path="res://Assets/Yellow Star.png" id="2_rfxq2"]
 [ext_resource type="Script" uid="uid://bp565qrds2b2a" path="res://Scenes/button_1.gd" id="3_mmgun"]
 [ext_resource type="PackedScene" uid="uid://dni6d3q76sth4" path="res://themed_timer.tscn" id="4_h684j"]
+[ext_resource type="AudioStream" uid="uid://caavk3ixux2kh" path="res://Audio/benkirb-shine-12-268905.mp3" id="5_h684j"]
+[ext_resource type="AudioStream" uid="uid://07nq8v5eta3u" path="res://Audio/universfield-magic-spell-02-250240.mp3" id="6_wu6l1"]
 
 [sub_resource type="Animation" id="Animation_rfxq2"]
 length = 0.001
@@ -213,6 +215,9 @@ script = ExtResource("3_mmgun")
 libraries/ = SubResource("AnimationLibrary_h684j")
 autoplay = &"float-up"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_1" unique_id=515867876]
+stream = ExtResource("5_h684j")
+
 [node name="Button_2" type="TextureButton" parent="." unique_id=2014988153]
 texture_filter = 1
 offset_left = 839.0
@@ -226,6 +231,9 @@ script = ExtResource("3_mmgun")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Button_2" unique_id=1721146779]
 libraries/ = SubResource("AnimationLibrary_cqly6")
 autoplay = &"float-up"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_2" unique_id=2083810655]
+stream = ExtResource("6_wu6l1")
 
 [node name="Button_3" type="TextureButton" parent="." unique_id=766751803]
 texture_filter = 1
@@ -241,6 +249,9 @@ script = ExtResource("3_mmgun")
 libraries/ = SubResource("AnimationLibrary_s1o1o")
 autoplay = &"float-down"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_3" unique_id=879040701]
+stream = ExtResource("6_wu6l1")
+
 [node name="Button_4" type="TextureButton" parent="." unique_id=1978048498]
 texture_filter = 1
 offset_left = 96.0
@@ -255,6 +266,9 @@ script = ExtResource("3_mmgun")
 libraries/ = SubResource("AnimationLibrary_7qfsw")
 autoplay = &"float-up"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_4" unique_id=1637650410]
+stream = ExtResource("6_wu6l1")
+
 [node name="Button_5" type="TextureButton" parent="." unique_id=2075061877]
 texture_filter = 1
 offset_left = 898.99994
@@ -268,6 +282,9 @@ script = ExtResource("3_mmgun")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Button_5" unique_id=1578152944]
 libraries/ = SubResource("AnimationLibrary_qs5pj")
 autoplay = &"float-down"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_5" unique_id=941277558]
+stream = ExtResource("5_h684j")
 
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("4_h684j")]
 position = Vector2(19, 21)
