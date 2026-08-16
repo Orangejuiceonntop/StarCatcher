@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cs7jx41t30l6m" path="res://Scenes/done_screen.gd" id="1_3rr80"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="1_en6tx"]
 [ext_resource type="Texture2D" uid="uid://dh6x540gfbx13" path="res://Assets/Win Screen Background.PNG" id="2_1q1k2"]
+[ext_resource type="AudioStream" uid="uid://bs0sifyp78jwm" path="res://Audio/creatorshome-keyboard-click-327728.mp3" id="4_8rpo2"]
 
 [node name="done_screen" type="Node2D" unique_id=592716187]
 script = ExtResource("1_3rr80")
@@ -32,6 +33,9 @@ theme_override_fonts/font = ExtResource("1_en6tx")
 theme_override_font_sizes/font_size = 24
 text = "play again?"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="retry" unique_id=1005437306]
+stream = ExtResource("4_8rpo2")
+
 [node name="menu" type="Button" parent="." unique_id=590325671]
 offset_left = 710.0
 offset_top = 300.0
@@ -41,6 +45,9 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_en6tx")
 theme_override_font_sizes/font_size = 26
 text = "menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="menu" unique_id=841040309]
+stream = ExtResource("4_8rpo2")
 
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

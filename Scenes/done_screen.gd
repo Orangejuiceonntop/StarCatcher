@@ -12,11 +12,15 @@ func _process(_delta: float) -> void:
 
 
 func _on_retry_pressed() -> void:
+	$retry/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 	Global.minigames_done = 0
 	Global.lives = 5
 	
 func _on_menu_pressed() -> void:
+	$menu/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
 	Global.minigames_done = 0
 	Global.lives = 5

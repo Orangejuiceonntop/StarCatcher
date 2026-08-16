@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bhuhntq0sxsgc" path="res://Assets/Starcatcher loading bg.PNG" id="2_2kfxj"]
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="3_2gedn"]
 [ext_resource type="AudioStream" uid="uid://bs0sifyp78jwm" path="res://Audio/creatorshome-keyboard-click-327728.mp3" id="4_2gedn"]
+[ext_resource type="AudioStream" uid="uid://mc6b1pxgrvh6" path="res://Audio/ikoliks_aj-lounge-elevator-music-332339.mp3" id="5_ibs2t"]
 
 [node name="Settings_scene" type="Node2D" unique_id=916544296]
 script = ExtResource("1_amiku")
@@ -74,11 +75,21 @@ offset_left = 316.0
 offset_top = 299.0
 offset_right = 472.0
 offset_bottom = 330.0
+max_value = 1.5
+step = 0.001
 
 [node name="v slider" type="HSlider" parent="." unique_id=1797453400]
 offset_left = 319.0
 offset_top = 355.0
 offset_right = 475.0
 offset_bottom = 386.0
+max_value = 1.5
+
+[node name="Bg Music" type="AudioStreamPlayer" parent="." unique_id=1551656495]
+stream = ExtResource("5_ibs2t")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="m slider" to="." method="_on_m_slider_value_changed"]
+[connection signal="value_changed" from="v slider" to="." method="_on_v_slider_value_changed"]
