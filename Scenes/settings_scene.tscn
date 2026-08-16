@@ -77,6 +77,7 @@ offset_right = 472.0
 offset_bottom = 330.0
 max_value = 1.5
 step = 0.001
+value = 1.0
 
 [node name="v slider" type="HSlider" parent="." unique_id=1797453400]
 offset_left = 319.0
@@ -84,6 +85,8 @@ offset_top = 355.0
 offset_right = 475.0
 offset_bottom = 386.0
 max_value = 1.5
+step = 0.001
+value = 1.0
 
 [node name="Bg Music" type="AudioStreamPlayer" parent="." unique_id=1551656495]
 stream = ExtResource("5_ibs2t")
