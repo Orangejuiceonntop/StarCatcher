@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://owr48mhbtqph" path="res://Assets/PixelifySans-Regular.ttf" id="1_en6tx"]
 [ext_resource type="Texture2D" uid="uid://dh6x540gfbx13" path="res://Assets/Win Screen Background.PNG" id="2_1q1k2"]
 [ext_resource type="AudioStream" uid="uid://bs0sifyp78jwm" path="res://Audio/creatorshome-keyboard-click-327728.mp3" id="4_8rpo2"]
+[ext_resource type="AudioStream" uid="uid://cgivyj85yv14" path="res://Audio/u_ss015dykrt-brass-fanfare-reverberated-146263.mp3" id="5_5u8ma"]
 
 [node name="done_screen" type="Node2D" unique_id=592716187]
 script = ExtResource("1_3rr80")
@@ -48,6 +49,11 @@ text = "menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="menu" unique_id=841040309]
 stream = ExtResource("4_8rpo2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1922339078]
+stream = ExtResource("5_5u8ma")
+autoplay = true
+bus = &"Sounds"
 
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
