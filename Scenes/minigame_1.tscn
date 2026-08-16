@@ -153,6 +153,7 @@ shape = SubResource("CircleShape2D_f6tb2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Star" unique_id=1707355575]
 stream = ExtResource("6_jmcek")
+bus = &"Sounds"
 
 [node name="Star2" type="Node2D" parent="." unique_id=1600520386]
 position = Vector2(568, -151)
@@ -182,6 +183,7 @@ shape = SubResource("CircleShape2D_f6tb2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Star2" unique_id=843708834]
 stream = ExtResource("7_ne1wf")
+bus = &"Sounds"
 
 [node name="Star3" type="Node2D" parent="." unique_id=1619967481]
 position = Vector2(-378, -272)
@@ -211,6 +213,7 @@ shape = SubResource("CircleShape2D_f6tb2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Star3" unique_id=1912049813]
 stream = ExtResource("6_jmcek")
+bus = &"Sounds"
 
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("6_vc5od")]
 position = Vector2(19, 19)

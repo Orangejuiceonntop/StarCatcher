@@ -217,6 +217,7 @@ autoplay = &"float-up"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_1" unique_id=515867876]
 stream = ExtResource("5_h684j")
+bus = &"Sounds"
 
 [node name="Button_2" type="TextureButton" parent="." unique_id=2014988153]
 texture_filter = 1
@@ -234,6 +235,7 @@ autoplay = &"float-up"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_2" unique_id=2083810655]
 stream = ExtResource("6_wu6l1")
+bus = &"Sounds"
 
 [node name="Button_3" type="TextureButton" parent="." unique_id=766751803]
 texture_filter = 1
@@ -251,6 +253,7 @@ autoplay = &"float-down"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_3" unique_id=879040701]
 stream = ExtResource("6_wu6l1")
+bus = &"Sounds"
 
 [node name="Button_4" type="TextureButton" parent="." unique_id=1978048498]
 texture_filter = 1
@@ -268,6 +271,7 @@ autoplay = &"float-up"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_4" unique_id=1637650410]
 stream = ExtResource("6_wu6l1")
+bus = &"Sounds"
 
 [node name="Button_5" type="TextureButton" parent="." unique_id=2075061877]
 texture_filter = 1
@@ -285,6 +289,7 @@ autoplay = &"float-down"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_5" unique_id=941277558]
 stream = ExtResource("5_h684j")
+bus = &"Sounds"
 
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("4_h684j")]
 position = Vector2(19, 21)

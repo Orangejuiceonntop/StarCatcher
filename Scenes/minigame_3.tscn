@@ -236,6 +236,7 @@ libraries/ = SubResource("AnimationLibrary_5plo5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Star" unique_id=1484282572]
 stream = ExtResource("4_rpf30")
+bus = &"Sounds"
 
 [node name="Black hole" type="TextureButton" parent="." unique_id=706034457]
 visible = false
