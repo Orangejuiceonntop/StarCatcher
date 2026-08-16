@@ -37,8 +37,9 @@ text = "retry"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="retry" unique_id=664723080]
 stream = ExtResource("4_38ql5")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2039467820]
+[node name="Sad trumpet sound" type="AudioStreamPlayer" parent="." unique_id=2039467820]
 stream = ExtResource("4_nk27f")
 autoplay = true
+bus = &"Sounds"
 
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
