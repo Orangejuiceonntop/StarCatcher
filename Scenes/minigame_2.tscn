@@ -201,6 +201,9 @@ offset_right = 1151.0
 offset_bottom = 646.0
 texture = ExtResource("1_dfb65")
 
+[node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("4_h684j")]
+position = Vector2(19, 21)
+
 [node name="Button_1" type="TextureButton" parent="." unique_id=472093709]
 texture_filter = 1
 offset_left = -16.999992
@@ -290,9 +293,6 @@ autoplay = &"float-down"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_5" unique_id=941277558]
 stream = ExtResource("5_h684j")
 bus = &"Sounds"
-
-[node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("4_h684j")]
-position = Vector2(19, 21)
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_button_2_pressed"]
