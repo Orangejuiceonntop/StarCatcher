@@ -283,7 +283,7 @@ libraries/ = SubResource("AnimationLibrary_mu65p")
 autoplay = &"eyecatcher2"
 
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("5_lr4ld")]
-position = Vector2(19, 21)
+position = Vector2(14, 14)
 
 [connection signal="pressed" from="Star" to="." method="_on_star_pressed"]
 [connection signal="pressed" from="Black hole" to="." method="_on_black_hole_pressed"]

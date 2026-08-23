@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dv2ghujaagr0l"]
+
+[ext_resource type="Script" uid="uid://d3of2i601hexb" path="res://Scenes/falling_star.gd" id="1_ls68b"]
+[ext_resource type="Texture2D" uid="uid://b6ncrq0b3l5jl" path="res://Assets/Yellow Star.png" id="1_lxlnb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lxlnb"]
+radius = 46.010868
+
+[node name="falling_star" type="RigidBody2D" unique_id=456186863]
+position = Vector2(513, 260)
+collision_mask = 0
+script = ExtResource("1_ls68b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=835184193]
+texture_filter = 1
+position = Vector2(-8.500023, -10.000011)
+scale = Vector2(5.9062486, 6.1874995)
+texture = ExtResource("1_lxlnb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1734456198]
+position = Vector2(-12, -15)
+shape = SubResource("CircleShape2D_lxlnb")
+disabled = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2013881314]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1099443819]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1262793102]
+position = Vector2(-12, -15)
+shape = SubResource("CircleShape2D_lxlnb")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

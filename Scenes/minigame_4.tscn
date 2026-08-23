@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bls8p0s1x6m4i" path="res://Scenes/minigame_4.gd" id="1_lrixb"]
 [ext_resource type="PackedScene" uid="uid://ds5q7w8f15kao" path="res://player.tscn" id="2_e1srr"]
 [ext_resource type="PackedScene" uid="uid://dni6d3q76sth4" path="res://themed_timer.tscn" id="3_wcvdo"]
+[ext_resource type="PackedScene" uid="uid://dv2ghujaagr0l" path="res://Scenes/falling_star.tscn" id="4_xea2i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1srr"]
 size = Vector2(23.51313, 649.6177)
@@ -52,5 +53,13 @@ shape = SubResource("RectangleShape2D_lrixb")
 [node name="Player" parent="." unique_id=1045593391 instance=ExtResource("2_e1srr")]
 position = Vector2(-205, 271)
 
+[node name="StarTimer" type="Timer" parent="." unique_id=107074471]
+wait_time = 0.5
+autostart = true
+
+[node name="falling_star" parent="." unique_id=456186863 instance=ExtResource("4_xea2i")]
+
 [node name="ThemedTimer" parent="." unique_id=557793562 instance=ExtResource("3_wcvdo")]
-position = Vector2(32, 37)
+position = Vector2(14, 14)
+
+[connection signal="timeout" from="StarTimer" to="." method="_on_star_timer_timeout"]
