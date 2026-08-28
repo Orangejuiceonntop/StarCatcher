@@ -5,6 +5,7 @@ extends RigidBody2D
 @onready var player: CharacterBody2D = $"../Player"
 @onready var self_area = $Area2D
 @onready var player_area = $"../Player/Area2D"
+signal star_caught()
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +17,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if player_area.overlaps_area(self_area):
 		if self.visible:
-			self.hide()
+			emit_signal("star_caught")
+			queue_free()
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
