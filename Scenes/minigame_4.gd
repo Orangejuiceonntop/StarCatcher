@@ -41,6 +41,8 @@ func spawn_meteor():
 	var meteor = preload("res://Scenes/falling_meteor.tscn")
 	var falling_meteor = meteor.instantiate()
 	
+	falling_meteor.meteor_hit.connect(_on_meteor_hit)
+	
 	add_child(falling_meteor)
 	falling_meteor.position.y = -50
 	falling_meteor.position.x = randf_range(50, 1024)
@@ -53,13 +55,14 @@ func _on_star_timer_timeout() -> void:
 
 func _on_meteor_timer_timeout() -> void:
 	spawn_meteor()
-	
-func _on_falling_meteor_meteor_hit() -> void:
-	Global.lives -= 1
-	Global.minigames_done -= 1
-	get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
 
 func _on_star_caught() -> void:
 	stars_caught += 1
 	count.text = str(stars_caught) + "/8"
+
+
+func _on_meteor_hit() -> void:
+	Global.lives -= 1
+	Global.minigames_done -= 1
+	get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")

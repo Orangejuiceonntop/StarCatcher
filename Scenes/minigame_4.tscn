@@ -64,10 +64,10 @@ autostart = true
 autostart = true
 
 [node name="falling_star" parent="." unique_id=456186863 instance=ExtResource("4_xea2i")]
-position = Vector2(513, 261)
+position = Vector2(684, 96)
 
 [node name="falling_meteor" parent="." unique_id=769788473 instance=ExtResource("5_ake4f")]
-position = Vector2(322, 259)
+position = Vector2(446, 93)
 gravity_scale = 0.2
 
 [node name="Count" type="RichTextLabel" parent="." unique_id=397147707]
@@ -87,4 +87,4 @@ position = Vector2(14, 14)
 [connection signal="timeout" from="StarTimer" to="." method="_on_star_timer_timeout"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
 [connection signal="star_caught" from="falling_star" to="." method="_on_star_caught"]
-[connection signal="meteor_hit" from="falling_meteor" to="." method="_on_falling_meteor_meteor_hit"]
+[connection signal="meteor_hit" from="falling_meteor" to="." method="_on_meteor_hit"]

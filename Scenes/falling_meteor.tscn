@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://chvf0ir7ab2er"]
+
+[ext_resource type="Texture2D" uid="uid://b1b2lpdy6hfir" path="res://Exports/index.apple-touch-icon.png" id="1_28yl3"]
+[ext_resource type="Script" uid="uid://canksjvlr3dc2" path="res://Scenes/falling_meteor.gd" id="1_j473j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j473j"]
+radius = 46.010868
+
+[node name="falling_meteor" type="RigidBody2D" unique_id=769788473]
+gravity_scale = 0.5
+script = ExtResource("1_j473j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1289524485]
+texture_filter = 1
+position = Vector2(-12.000001, -14.000001)
+scale = Vector2(0.37925345, 0.37065962)
+texture = ExtResource("1_28yl3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=673595922]
+position = Vector2(-12, -15)
+shape = SubResource("CircleShape2D_j473j")
+disabled = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=234054208]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1780140930]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=705915693]
+position = Vector2(-12, -15)
+shape = SubResource("CircleShape2D_j473j")
