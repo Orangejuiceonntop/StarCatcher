@@ -3,13 +3,16 @@ extends Node2D
 @onready var themed_timer: Node2D = $ThemedTimer
 @onready var count: RichTextLabel = $Count
 
+
 var timer_end = false
 var stars_caught = 0
+
 
 
 func _ready() -> void:
 	await themed_timer.Timer(15.0)
 	timer_end = true
+	
 
 
 func _process(_delta: float) -> void:
@@ -58,6 +61,7 @@ func _on_meteor_timer_timeout() -> void:
 
 
 func _on_star_caught() -> void:
+	$falling_star/AudioStreamPlayer.play()
 	stars_caught += 1
 	count.text = str(stars_caught) + "/8"
 

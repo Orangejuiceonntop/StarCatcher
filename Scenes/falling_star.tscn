@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://d3of2i601hexb" path="res://Scenes/falling_star.gd" id="1_ls68b"]
 [ext_resource type="Texture2D" uid="uid://b6ncrq0b3l5jl" path="res://Assets/Yellow Star.png" id="1_lxlnb"]
+[ext_resource type="AudioStream" uid="uid://caavk3ixux2kh" path="res://Audio/benkirb-shine-12-268905.mp3" id="3_5e2lc"]
+[ext_resource type="AudioStream" uid="uid://07nq8v5eta3u" path="res://Audio/universfield-magic-spell-02-250240.mp3" id="4_t7sq3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lxlnb"]
 radius = 46.010868
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_os55d"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("3_5e2lc")
+stream_1/stream = ExtResource("4_t7sq3")
 
 [node name="falling_star" type="RigidBody2D" unique_id=456186863]
 position = Vector2(513, 260)
@@ -30,5 +38,9 @@ disabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1262793102]
 position = Vector2(-12, -15)
 shape = SubResource("CircleShape2D_lxlnb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1740630476]
+stream = SubResource("AudioStreamRandomizer_os55d")
+bus = &"Sounds"
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
